@@ -23,10 +23,9 @@ const Nav = () => {
 						</li>
 					</ul>
 
-					<div className="image">
+					{/* <div className="image">
 						<img src={soda} alt="" />
-						<p>The Nerd Next Door</p>
-					</div>
+					</div> */}
 
 					<ul class="right-menu">
 						<li>

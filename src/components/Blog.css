@@ -23,6 +23,10 @@
 	margin-bottom: 0.2rem;
 }
 
+.date {
+	font-size: small;
+}
+
 .post__cardFooter > p {
 	line-height: 3.6;
 }

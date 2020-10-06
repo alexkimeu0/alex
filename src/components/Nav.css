@@ -1,6 +1,8 @@
 .nav {
 	position: sticky;
 	top: 0;
+	z-index: 100;
+	margin: 1rem 0;
 }
 
 .nav a {
@@ -43,8 +45,8 @@
 
 .image {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	/* align-items: center; */
 }
 
 .menu .image > img {
@@ -53,11 +55,4 @@
 	height: 50px;
 	width: 50px;
 	cursor: pointer;
-}
-
-.image > p {
-	margin-top: 0.3rem;
-	color: #ffffff;
-	font-family: "Poiret One", cursive;
-	font-weight: bold;
 }

@@ -25,6 +25,25 @@ const Portfolio = () => {
 						</div>
 					</a>
 				</div>
+
+				<div className="project">
+					<a href="http://doanei.com" target="_blank">
+						<div className="project__card">
+							<div className="project__cardHeader">
+								<h2>DOAN Website</h2>
+
+								<div className="date">
+									{" "}
+									<p>Laravel, JavaScript, MySQL</p>
+								</div>
+							</div>
+
+							<div className="project__cardBody">
+								<img src={postImage} loading="lazy" alt="title" />
+							</div>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	);

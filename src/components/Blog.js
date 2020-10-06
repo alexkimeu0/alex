@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { IconButton } from "@material-ui/core";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
@@ -11,14 +12,11 @@ const Blog = () => {
 		<div className="container">
 			<div className="posts">
 				<div className="post">
-					<a href="">
+					<Link to="/post">
 						<div className="post__card">
 							<div className="post__cardHeader">
 								<h2>JS Array sort() Method</h2>
-								{/* <p className="content">
-									I feel ashamed for all the parts of me I let you see, That our
-									loss was feeding into fears and insecurities...
-								</p> */}
+
 								<div className="date">
 									{" "}
 									<p> September 2, 2020</p>
@@ -38,7 +36,35 @@ const Blog = () => {
 								</IconButton>
 							</div>
 						</div>
-					</a>
+					</Link>
+				</div>
+
+				<div className="post">
+					<Link to="/post">
+						<div className="post__card">
+							<div className="post__cardHeader">
+								<h2>JS Array sort() Method</h2>
+
+								<div className="date">
+									{" "}
+									<p> September 2, 2020</p>
+								</div>
+							</div>
+
+							<div className="post__cardBody">
+								<img src={postImage} loading="lazy" alt="title" />
+							</div>
+
+							<div className="post__cardFooter">
+								<IconButton>
+									<FavoriteBorderIcon />
+								</IconButton>
+								<IconButton>
+									<ChatOutlinedIcon />
+								</IconButton>
+							</div>
+						</div>
+					</Link>
 				</div>
 			</div>
 		</div>

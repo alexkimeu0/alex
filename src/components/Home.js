@@ -6,6 +6,7 @@ const Home = () => {
 		<div class="overview">
 			<div class="salut">
 				<h1 class="name">Alex Kimeu</h1>
+				<h3 className="tagline">...The Nerd Next Door...</h3>
 			</div>
 			<div class="about">
 				<h1 class="title">Software Developer.</h1>

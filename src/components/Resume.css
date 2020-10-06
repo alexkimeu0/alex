@@ -1,5 +1,5 @@
-.container {
-	margin-top: 1rem;
+.resume {
+	margin: 1rem 0 3rem 0;
 }
 
 .education,
@@ -115,16 +115,16 @@
 	/* Make sure that all arrows are pointing leftwards */
 	.timeline-container:nth-child(even)::before {
 		left: 60px;
-		border: medium solid white;
+		border: medium solid #ecf0f1;
 		border-width: 10px 10px 10px 0;
-		border-color: transparent white transparent transparent;
+		border-color: transparent #ecf0f1 transparent transparent;
 	}
 
 	.timeline-container:nth-child(odd)::before {
 		left: 60px;
-		border: medium solid white;
+		border: medium solid #ecf0f1;
 		border-width: 10px 10px 10px 0;
-		border-color: transparent white transparent transparent;
+		border-color: transparent #ecf0f1 transparent transparent;
 	}
 
 	/* Make all right containers behave like the left ones */
