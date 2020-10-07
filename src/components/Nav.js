@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import soda from "../images/soda.jpg";
 import "./Nav.css";
 
 const Nav = () => {
 	return (
 		<nav className="nav">
-			<div class="container">
-				<div class="menu">
-					<ul class="left-menu">
+			<div className="container">
+				<div className="menu">
+					<ul className="left-menu">
 						<li>
 							<Link to="/">Home</Link>
 						</li>
@@ -23,29 +22,29 @@ const Nav = () => {
 						</li>
 					</ul>
 
-					{/* <div className="image">
+					{/* <div classNameName="image">
 						<img src={soda} alt="" />
 					</div> */}
 
-					<ul class="right-menu">
+					<ul className="right-menu">
 						<li>
 							<a href="https://github.com/alexkimeu0">
-								<i class="fab fa-github"></i>
+								<i className="fab fa-github"></i>
 							</a>
 						</li>
 						<li>
 							<a href="https://twitter.com/alexkimeu0">
-								<i class="fab fa-twitter"></i>
+								<i className="fab fa-twitter"></i>
 							</a>
 						</li>
 						<li>
 							<a href="https://www.linkedin.com/in/alexkimeu0/">
-								<i class="fab fa-linkedin"></i>
+								<i className="fab fa-linkedin"></i>
 							</a>
 						</li>
 						<li>
 							<a href="https://medium.com/@alexkimeu0">
-								<i class="fab fa-medium"></i>
+								<i className="fab fa-medium"></i>
 							</a>
 						</li>
 					</ul>

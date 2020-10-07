@@ -1,49 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import postImage from "../images/sort.png";
+
+import Project from "./Project";
+
+import axios from "./axios";
 
 import "./Portfolio.css";
 
 const Portfolio = () => {
+	const [projects, setProjects] = useState([]);
+
+	useEffect(() => {
+		axios.get("/portfolio").then((res) => {
+			setProjects(res.data);
+		});
+	}, []);
+
 	return (
 		<div className="container">
 			<div className="projects">
-				<div className="project">
-					<a href="https://covid-19-96184.web.app/" target="_blank">
-						<div className="project__card">
-							<div className="project__cardHeader">
-								<h2>COVID-19 Tracker</h2>
-
-								<div className="date">
-									{" "}
-									<p>React, Material UI, Firebase</p>
-								</div>
-							</div>
-
-							<div className="project__cardBody">
-								<img src={postImage} loading="lazy" alt="title" />
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<div className="project">
-					<a href="http://doanei.com" target="_blank">
-						<div className="project__card">
-							<div className="project__cardHeader">
-								<h2>DOAN Website</h2>
-
-								<div className="date">
-									{" "}
-									<p>Laravel, JavaScript, MySQL</p>
-								</div>
-							</div>
-
-							<div className="project__cardBody">
-								<img src={postImage} loading="lazy" alt="title" />
-							</div>
-						</div>
-					</a>
-				</div>
+				{projects.map((project) => (
+					<Project project={project} />
+				))}
 			</div>
 		</div>
 	);

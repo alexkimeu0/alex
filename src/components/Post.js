@@ -3,33 +3,30 @@ import postImage from "../images/sort.png";
 
 import "./Post.css";
 
-const Post = () => {
+const Post = ({ post }) => {
+	console.log(post);
 	return (
 		<div className="container">
 			<div className="blog-post">
 				<h1 className="post-title">
 					JS Array sort() Method.<span>September 2, 2020</span>
 				</h1>
-				<img src={postImage} alt="Title" />
+				<img src={postImage} loading="lazy" alt="Title" />
 				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry's standard dummy text ever
-					since the 1500s, when an unknown printer took a galley of type and
-					scrambled it to make a type specimen book. It has survived not only
-					five centuries, but also the leap into electronic typesetting,
-					remaining essentially unchanged. It was popularised in the 1960s with
-					the release of Letraset sheets containing Lorem Ipsum passages, and
-					more recently with desktop publishing software like Aldus PageMaker
-					including versions of Lorem Ipsum. It is a long established fact that
-					a reader will be distracted by the readable content of a page when
-					looking at its layout. The point of using Lorem Ipsum is that it has a
-					more-or-less normal distribution of letters, as opposed to using
-					'Content here, content here', making it look like readable English.
-					Many desktop publishing packages and web page editors now use Lorem
-					Ipsum as their default model text, and a search for 'lorem ipsum' will
-					uncover many web sites still in their infancy. Various versions have
-					evolved over the years, sometimes by accident, sometimes on purpose
-					(injected humour and the like).
+					This method sorts the elements of an array in ascending order by
+					default. It converts the elements from the array to strings then
+					compares their sequences of utf-16 code values. For an array of
+					strings, this works perfectly fine. However, to sort an array of
+					numbers, this method will not work as expected because it converts the
+					elements to strings first. To achieve what you expect, you can provide
+					a compare function as a callback to the sort method. There are 3
+					possible outcomes in the callback function:
+					<br />
+					{"<"} : a comes first <br /> 0 : no change
+					<br />
+					{">"} 0 : b comes first
+					<br /> If you want to sort in descending order, you can return b - a
+					in the callback function.
 				</p>
 			</div>
 		</div>
